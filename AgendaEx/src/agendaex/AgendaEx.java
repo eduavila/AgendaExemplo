@@ -6,6 +6,8 @@
 
 package agendaex;
 
+import java.util.Scanner;
+
 /**
  *
  * @author eduardo
@@ -16,7 +18,33 @@ public class AgendaEx {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+       System.out.println("======== Agenda Exemplo ========");
+       System.out.println("Menu escolha uma opção.");
+       System.out.println("1 - Cadastrar novo registro.");
+       System.out.println("2 - Listar todos registro agenda.");
+       System.out.println("3 - Busca por numero");
+       System.out.println("4 - Deletar numero");
+       
+        Scanner  teclado = new Scanner(System.in);
+        
+       int  opcao = teclado.nextInt();
+       
+       view visao = new view();
+       
+       
+       if(opcao == 1){
+           
+           visao.listarTodos();
+       }if(opcao ==2){
+           visao.cadastrar();
+                   
+       }
+       
+       
+    
+     
+
+       
     }
     
 }
